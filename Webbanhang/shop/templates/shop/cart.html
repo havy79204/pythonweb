@@ -1,0 +1,60 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block cart_content %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+    <title>Cart</title>
+</head>
+<body>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="box-element">
+
+			<a  class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190; Continue Shopping</a>
+            <a href="{% url 'checkout' %}">Proceed to Checkout</a>
+
+			<br>
+			<br>
+			<table class="table">
+				<tr>
+					<th><h5>Items: <strong>{{ items|length }}</strong></h5></th>
+					<th><h5>Total:<strong> ${{ donhang.total_price }}</strong></h5></th>
+					<th>
+						<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'checkout' %}">Checkout</a>
+					</th>
+				</tr>
+			</table>
+
+		</div>
+
+		<br>
+		<div class="box-element">
+			<div class="cart-row">
+				<div style="flex:2"></div>
+				<div style="flex:2"><strong>Item</strong></div>
+				<div style="flex:1"><strong>Price</strong></div>
+			<!--	<div style="flex:1"><strong>Quantity</strong></div>-->
+				<!--<div style="flex:1"><strong>Total</strong></div>-->
+			</div>
+			{% for item in items %}
+			<div class="cart-row">
+				<div style="flex:2"><img class="row-image" src="{{item.san_pham.image_url }}"></div>
+				<div style="flex:2"><p>{{ item.san_pham.ten }}</p></div>
+				<div style="flex:1"><p>{{ item.san_pham.gia }}</p></div>
+				<!--<div style="flex:1">
+					<p class="quantity">{{ item.san_pham|length }}</p>
+					<div class="quantity">
+						<img class="chg-quantity" src="{% static  'shop/images/arrow-up.png' %}">
+				
+						<img class="chg-quantity" src="{% static  'shop/images/arrow-down.png' %}">
+					</div>
+				</div> -->
+				<!--<div style="flex:1"><p>$32</p></div>-->
+			</div>
+        {% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock cart_content %}

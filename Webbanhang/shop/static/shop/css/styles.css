@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* Định dạng cơ bản */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+    margin-bottom: 2rem;
+}
+
+.banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+}
+
+/* Danh sách sản phẩm */
+.products {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 1.5rem;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: white;
+    width: 200px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product p {
+    color: #007bff;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
